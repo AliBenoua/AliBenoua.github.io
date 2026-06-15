@@ -1,54 +1,58 @@
-/*!
-* Start Bootstrap - Freelancer v7.0.7 (https://startbootstrap.com/theme/freelancer)
-* Copyright 2013-2023 Start Bootstrap
-* Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
-*/
 //
-// Scripts
-// 
+// Ali Bennani — Portfolio scripts
+//
 
-window.addEventListener('DOMContentLoaded', event => {
+window.addEventListener('DOMContentLoaded', () => {
 
-    // Navbar shrink function
-    var navbarShrink = function () {
-        const navbarCollapsible = document.body.querySelector('#mainNav');
-        if (!navbarCollapsible) {
-            return;
-        }
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink')
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink')
-        }
+    // Current year in footer
+    const yearEl = document.getElementById('year');
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+    // Navbar background on scroll
+    const nav = document.getElementById('mainNav');
+    const onScroll = () => {
+        if (!nav) return;
+        nav.classList.toggle('scrolled', window.scrollY > 8);
     };
+    onScroll();
+    document.addEventListener('scroll', onScroll, { passive: true });
 
-    // Shrink the navbar 
-    navbarShrink();
-
-    // Shrink the navbar when page is scrolled
-    document.addEventListener('scroll', navbarShrink);
-
-    // Activate Bootstrap scrollspy on the main nav element
-    const mainNav = document.body.querySelector('#mainNav');
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            rootMargin: '0px 0px -40%',
+    // Mobile nav toggle
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    if (toggle && links) {
+        toggle.addEventListener('click', () => {
+            const open = links.classList.toggle('open');
+            toggle.setAttribute('aria-expanded', String(open));
         });
-    };
+        // Close the menu after clicking a link (mobile)
+        links.querySelectorAll('a').forEach((a) => {
+            a.addEventListener('click', () => {
+                links.classList.remove('open');
+                toggle.setAttribute('aria-expanded', 'false');
+            });
+        });
+    }
 
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
+    // Scroll-reveal animation
+    const revealTargets = document.querySelectorAll(
+        '.section-kicker, .section-title, .section-lead, .about-grid, ' +
+        '.skill-card, .project-card, .timeline-item, .contact-lead, ' +
+        '.contact-inner .btn, .contact-social'
     );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
-    });
+    revealTargets.forEach((el) => el.setAttribute('data-reveal', ''));
 
+    if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('is-visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+        revealTargets.forEach((el) => observer.observe(el));
+    } else {
+        revealTargets.forEach((el) => el.classList.add('is-visible'));
+    }
 });

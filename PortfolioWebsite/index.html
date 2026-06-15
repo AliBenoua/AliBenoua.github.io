@@ -3,378 +3,283 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>Ali's Portfolio</title>
-        <!-- Favicon-->
+        <meta name="description" content="Ali Bennani — AI Master's student at the University of Sheffield and former Google DeepMind research intern. Machine learning, computer vision and NLP engineer." />
+        <meta name="author" content="Ali Bennani" />
+        <meta name="theme-color" content="#0b1020" />
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="Ali Bennani — AI / Machine Learning Engineer" />
+        <meta property="og:description" content="AI Master's student at the University of Sheffield. Former Google DeepMind research intern working on computer vision, NLP and multi-agent systems." />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://alibenoua.github.io/PortfolioWebsite/" />
+
+        <title>Ali Bennani — AI / ML Engineer</title>
+
+        <!-- Favicon -->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
-        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
+
+        <!-- Google fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+        <!-- Font Awesome icons (free) -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" referrerpolicy="no-referrer" />
+
+        <!-- Core theme CSS -->
         <link href="css/styles.css" rel="stylesheet" />
     </head>
     <body id="page-top">
-        <!-- Navigation-->
-        <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
-            <div class="container">
-                <a class="navbar-brand" href="#page-top">Year 3 Computer Science</a>
-                <button class="navbar-toggler text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-                    Menu
+        <!-- Navigation -->
+        <nav class="navbar" id="mainNav">
+            <div class="container nav-inner">
+                <a class="brand" href="#page-top"><span class="brand-mark">AB</span> Ali Bennani</a>
+                <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
                     <i class="fas fa-bars"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#portfolio">Portfolio</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded" href="#about">About</a></li>
+                <ul class="nav-links" id="navLinks">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a class="nav-cv" href="Ali-Bennani-CV.pdf" target="_blank" rel="noopener"><i class="fas fa-file-arrow-down"></i> CV</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Hero -->
+        <header class="hero" id="hero">
+            <div class="hero-glow"></div>
+            <div class="container hero-inner">
+                <p class="hero-eyebrow">Hi, I'm Ali</p>
+                <h1 class="hero-title">AI &amp; Machine&nbsp;Learning<br /><span class="grad-text">Engineer</span></h1>
+                <p class="hero-sub">
+                    AI Master's student at the <strong>University of Sheffield</strong> and former
+                    <strong>Google DeepMind</strong> research intern. I build computer vision, NLP
+                    and multi-agent systems — from novel YOLO segmentation models to LLM pipelines.
+                </p>
+                <div class="hero-tags">
+                    <span>Python</span><span>PyTorch</span><span>Computer Vision</span>
+                    <span>NLP / LLMs</span><span>PySpark</span><span>CUDA</span>
+                </div>
+                <div class="hero-cta">
+                    <a class="btn btn-primary" href="#projects">View Projects</a>
+                    <a class="btn btn-ghost" href="Ali-Bennani-CV.pdf" target="_blank" rel="noopener"><i class="fas fa-file-arrow-down"></i> Download CV</a>
+                </div>
+                <div class="hero-social">
+                    <a href="https://github.com/AliBenoua" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ab-ali-bennani" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://devpost.com/AliBenoua" target="_blank" rel="noopener" aria-label="Devpost"><i class="fab fa-dev"></i></a>
+                    <a href="mailto:abennani152@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </header>
+
+        <!-- About -->
+        <section class="section" id="about">
+            <div class="container">
+                <p class="section-kicker">01 — About</p>
+                <h2 class="section-title">A bit about me</h2>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <p>
+                            I'm an Artificial Intelligence Master's student at the University of Sheffield,
+                            having graduated with a <strong>First-class</strong> BSc in Computer Science from the
+                            University of Liverpool. My focus is on machine learning at scale — training and
+                            tuning models for computer vision, natural language processing and beyond.
+                        </p>
+                        <p>
+                            In summer 2025 I interned at <strong>Google DeepMind</strong>, where I developed a novel
+                            YOLO architecture for liquid instance segmentation in robotic chemistry, reaching
+                            <strong>97% accuracy</strong>. I've also benchmarked and tuned modern LLMs, built
+                            document question-answering pipelines, and shipped a prize-winning multi-agent system
+                            at a hackathon.
+                        </p>
+                    </div>
+                    <ul class="about-facts">
+                        <li><i class="fas fa-graduation-cap"></i><div><strong>MSc Artificial Intelligence</strong><span>University of Sheffield · 2025–2026</span></div></li>
+                        <li><i class="fas fa-award"></i><div><strong>BSc Computer Science (First)</strong><span>University of Liverpool · 2022–2025</span></div></li>
+                        <li><i class="fas fa-shield-halved"></i><div><strong>Certified in Cyber Security</strong><span>ISC2 · June 2025</span></div></li>
+                        <li><i class="fas fa-language"></i><div><strong>Languages</strong><span>English · French · Arabic · Spanish</span></div></li>
                     </ul>
                 </div>
             </div>
-        </nav>
-        <!-- Masthead-->
-        <header class="masthead bg-primary text-white text-center">
-            <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
-                <!-- Masthead Heading-->
-                <h1 class="masthead-heading text-uppercase mb-0">Ali's Portfolio</h1>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Masthead Subheading-->
-                <p class="masthead-subheading font-weight-light mb-0">Computer Science Student University of Liverpool </p>
-            </div>
-        </header>
-        <!-- Portfolio Section-->
-        <section class="page-section portfolio" id="portfolio">
-            <div class="container">
-                <!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Portfolio</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Portfolio Grid Items-->
-                <div class="row justify-content-center">
-                    <!-- Portfolio Item 1-- -->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal1">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/CVlogo.JPEG" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 2-- -->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal2">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/enemyShip.png" alt="..." />
-                        </div>
-                    </div>
-                    <!-- Portfolio Item 3--
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal3">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/circus.png" alt="..." />
-                        </div>
-                </div-->
-                    <!-- Portfolio Item 4-->
-                    <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal4">
-                            <!-- <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div> -->
-                            <img class="img-fluid" src="assets/img/portfolio/game.png" alt="..." />
-                        </div>
-                  </div>
-                    <!-- Portfolio Item 5--
-                    <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal5">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/safe.png" alt="..." />
-                        </div>
-                </div-->
-                    <!-- Portfolio Item 6--
-                    <div class="col-md-6 col-lg-4">
-                        <div class="portfolio-item mx-auto" data-bs-toggle="modal" data-bs-target="#portfolioModal6">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/submarine.png" alt="..." />
-                        </div>
-                    </div>
-                </div>
-                </div-->
         </section>
-        <!-- About Section-->
-        <section class="page-section bg-primary text-white mb-0" id="about">
+
+        <!-- Skills -->
+        <section class="section section-alt" id="skills">
             <div class="container">
-                <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white">About</h2>
-                <!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- About Section Content-->
-                <div class="row">
-                    <div class="col-lg-4 ms-auto"><p class="lead">My name is Ali Bennani and this web page is where whoever may be reading this may find my portfolio and all the info concerning it.</p></div>
-                    <div class="col-lg-4 me-auto"><p class="lead">As a third year student I will be focusing on simple applications of my knowledge and mainly displaying the skills I learned and my passion for the subject.</p></div>
+                <p class="section-kicker">02 — Skills</p>
+                <h2 class="section-title">What I work with</h2>
+                <div class="skills-grid">
+                    <article class="skill-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI / Machine Learning</h3>
+                        <p>scikit-learn &amp; PySpark pipelines, neural networks for computer vision (YOLO, R-CNN), and tuning / benchmarking LLMs such as Qwen, Gemma and HRM.</p>
+                    </article>
+                    <article class="skill-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Languages</h3>
+                        <p>Python for ML &amp; data science, C for parallel computing, plus Java, TypeScript and JavaScript across application and systems work.</p>
+                    </article>
+                    <article class="skill-card">
+                        <i class="fas fa-server"></i>
+                        <h3>High-Performance Computing</h3>
+                        <p>Training models on Linux HPC clusters, distributed data processing with PySpark, and GPU programming with CUDA &amp; OpenMP.</p>
+                    </article>
+                    <article class="skill-card">
+                        <i class="fas fa-diagram-project"></i>
+                        <h3>Systems &amp; Tooling</h3>
+                        <p>Multi-agent architectures with Google ADK &amp; Gemini, FastAPI services, shell scripting and command-line ML deployment.</p>
+                    </article>
                 </div>
             </div>
-       
-        <!-- Footer-->
-        <footer class="footer text-center">
+        </section>
+
+        <!-- Projects -->
+        <section class="section" id="projects">
             <div class="container">
-                <div class="row">
-                    <!-- Footer Location-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Location</h4>
-                        <p class="lead mb-0">
-                            University of Liverpool
-                            <br />
-                            
-                        </p>
+                <p class="section-kicker">03 — Projects</p>
+                <h2 class="section-title">Selected work</h2>
+                <p class="section-lead">Pulled from my <a href="https://github.com/AliBenoua" target="_blank" rel="noopener">GitHub</a>.</p>
+                <div class="projects-grid">
+
+                    <article class="project-card">
+                        <div class="project-top">
+                            <i class="fas fa-flask project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/AliBenoua/Robot-soft-mater-scientist" target="_blank" rel="noopener" aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Robot Soft-Matter Scientist</h3>
+                        <p>Fine-tuned a YOLOv11 model to detect AOT / oil / water phases in lab experiments and automatically compute phase heights — the computer-vision work behind my DeepMind research.</p>
+                        <ul class="tech-list"><li>Python</li><li>YOLOv11</li><li>Computer Vision</li></ul>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-top">
+                            <i class="fas fa-dragon project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/AliBenoua/HackSheffield10" target="_blank" rel="noopener" aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+                                <a href="https://devpost.com/AliBenoua" target="_blank" rel="noopener" aria-label="View on Devpost"><i class="fab fa-dev"></i></a>
+                            </div>
+                        </div>
+                        <h3>AI Dungeon Master <span class="badge">🏆 Hackathon Winner</span></h3>
+                        <p>A stateful, multi-agent system using Python, Google ADK and Gemini 2.5 that acts as an AI Dungeon Master for Dungeons &amp; Dragons, served via FastAPI to track real-time game state.</p>
+                        <ul class="tech-list"><li>TypeScript</li><li>Python</li><li>Google ADK</li><li>Gemini 2.5</li></ul>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-top">
+                            <i class="fas fa-compass project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/AliBenoua/Steering-Behaviours" target="_blank" rel="noopener" aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Steering Vector Analysis</h3>
+                        <p>Extracting steering vectors from layer activations across different models to understand how an LLM internally represents reasoning versus information retrieval.</p>
+                        <ul class="tech-list"><li>Python</li><li>Interpretability</li><li>LLMs</li></ul>
+                    </article>
+
+                    <article class="project-card">
+                        <div class="project-top">
+                            <i class="fas fa-file-lines project-icon"></i>
+                            <div class="project-links">
+                                <a href="https://github.com/AliBenoua" target="_blank" rel="noopener" aria-label="View on GitHub"><i class="fab fa-github"></i></a>
+                            </div>
+                        </div>
+                        <h3>Document Q&amp;A Assistant</h3>
+                        <p>A retrieval pipeline that performs context-aware chunking and tokenisation before applying a BERT-style model to answer questions over long documents.</p>
+                        <ul class="tech-list"><li>Python</li><li>BERT</li><li>NLP</li></ul>
+                    </article>
+
+                </div>
+                <div class="projects-more">
+                    <a class="btn btn-ghost" href="https://github.com/AliBenoua" target="_blank" rel="noopener"><i class="fab fa-github"></i> See more on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="section section-alt" id="experience">
+            <div class="container">
+                <p class="section-kicker">04 — Experience</p>
+                <h2 class="section-title">Where I've worked</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-body">
+                            <div class="timeline-head">
+                                <h3>AI Research Intern</h3>
+                                <span class="timeline-date">Jun 2025 – Aug 2025</span>
+                            </div>
+                            <p class="timeline-org">Google DeepMind — Research Ready</p>
+                            <ul>
+                                <li>Built an AI vision component for robotic chemistry, training a novel YOLO model for liquid instance segmentation at 97% accuracy.</li>
+                                <li>Worked with domain experts to apply AI to interdisciplinary chemistry-automation problems.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <!-- Footer Social Icons-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">Around the Web</h4>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.facebook.com/ali.bennani3" target="_blank"><i class="fab fa-fw fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/ali-bennani-1a822a254/" target="_blank"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.instagram.com/alibennanii_/" target="_blank"><i class="fab fa-fw fa-instagram"></i></a>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-body">
+                            <div class="timeline-head">
+                                <h3>Hackathon — Multi-Agent AI Game</h3>
+                                <span class="timeline-date">2025</span>
+                            </div>
+                            <p class="timeline-org">ShefHack, University of Sheffield</p>
+                            <ul>
+                                <li>Engineered a stateful multi-agent system with Python, Google ADK and Gemini 2.5 powering an AI-directed adventure game.</li>
+                                <li>Deployed the agentic architecture via FastAPI and won a prize under tight hackathon constraints.</li>
+                            </ul>
+                        </div>
                     </div>
-                    <!-- Footer About Text-->
-                    <div class="col-lg-4">
-                        <h4 class="text-uppercase mb-4">Help</h4>
-                        <p class="lead mb-0">
-                            This website has been made with the help of 
-                            <a href="http://startbootstrap.com">Start Bootstrap</a>
-                            .
-                        </p>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-body">
+                            <div class="timeline-head">
+                                <h3>Teaching Assistant</h3>
+                                <span class="timeline-date">Feb 2024 – May 2024</span>
+                            </div>
+                            <p class="timeline-org">University of Liverpool</p>
+                            <ul>
+                                <li>Mentored first-year students on object-oriented programming over 10 weeks.</li>
+                                <li>Guided students through implementing Java functions and systems step by step.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="section" id="contact">
+            <div class="container contact-inner">
+                <p class="section-kicker">05 — Contact</p>
+                <h2 class="section-title">Let's build something</h2>
+                <p class="contact-lead">
+                    I'm open to AI / ML roles, research collaborations and interesting problems.
+                    The fastest way to reach me is email.
+                </p>
+                <a class="btn btn-primary btn-lg" href="mailto:abennani152@gmail.com"><i class="fas fa-envelope"></i> abennani152@gmail.com</a>
+                <div class="contact-social">
+                    <a href="https://github.com/AliBenoua" target="_blank" rel="noopener" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/ab-ali-bennani" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://devpost.com/AliBenoua" target="_blank" rel="noopener" aria-label="Devpost"><i class="fab fa-dev"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container footer-inner">
+                <span>© <span id="year"></span> Ali Bennani</span>
+                <a href="#page-top" class="footer-top">Back to top <i class="fas fa-arrow-up"></i></a>
             </div>
         </footer>
-        <!-- Copyright Section-->
-        <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright &copy; Your Website 2023</small></div>
-        </div>
-        <!-- Portfolio Modals-->
-        <!-- Portfolio Modal 1-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" aria-labelledby="portfolioModal1" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Ali Bennani CV</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/CVImage.jpeg" alt="..." />
-                                    <a class="btn btn-outline-danger " href="Ali Bennani- resume Nov2024.pdf" download="proposed_file_name">Download</a>
-                                    <!-- Portfolio Modal - Text-->
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 2-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" aria-labelledby="portfolioModal2" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Javascript Game</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/JSGame.jpeg" alt="..." />
-                                    <a class="btn btn-outline-danger " href="https://student.csc.liv.ac.uk/~sgabenna/game.html" target="_blank"><i class="fa-brands fa-js"></i> Ali's Memory game</a>                                    
-                                    <!-- Portfolio Modal - Text-->
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 3-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" aria-labelledby="portfolioModal3" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Circus Tent</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/circus.png" alt="..." />
 
-                                    <!-- Portfolio Modal - Text-->
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 4-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" aria-labelledby="portfolioModal4" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Play Store App</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/game.png" alt="..." />
-                                    <a class="btn btn-outline-danger " href="https://play.google.com/store/apps/details?id=com.benoua.mymemory1&pli=1" target="_blank"><i class="fa-brands fa-google-play"></i> Ali's Memory game</a>
-                                    <!-- Portfolio Modal - Text-->
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 5-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" aria-labelledby="portfolioModal5" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Locked Safe</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/safe.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 6-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" aria-labelledby="portfolioModal6" aria-hidden="true">
-            <div class="modal-dialog modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header border-0"><button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button></div>
-                    <div class="modal-body text-center pb-5">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-                                    <!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">Submarine</h2>
-                                    <!-- Icon Divider-->
-                                    <div class="divider-custom">
-                                        <div class="divider-custom-line"></div>
-                                        <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-                                        <div class="divider-custom-line"></div>
-                                    </div>
-                                    <!-- Portfolio Modal - Image-->
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/submarine.png" alt="..." />
-                                    <!-- Portfolio Modal - Text-->
-                                    <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil, molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit soluta, eos quod consequuntur itaque. Nam.</p>
-                                    <button class="btn btn-primary" data-bs-dismiss="modal">
-                                        <i class="fas fa-xmark fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Bootstrap core JS-->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-        <!-- Core theme JS-->
+        <!-- Core theme JS -->
         <script src="js/scripts.js"></script>
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <!-- * *                               SB Forms JS                               * *-->
-        <!-- * * Activate your form at https://startbootstrap.com/solution/contact-forms * *-->
-        <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *-->
-        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
     </body>
 </html>
